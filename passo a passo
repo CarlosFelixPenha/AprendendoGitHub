@@ -1,0 +1,6 @@
+"Alteração no projeto"
+"Comando" git status
+"Comando" git add .
+"Comando" git commit -m "Primeiro Comite"
+"Comando" git remote add origin https://github.com/CarlosFelixPenha/AprendendoGitHub.git
+"Comando" git push -u origin master
