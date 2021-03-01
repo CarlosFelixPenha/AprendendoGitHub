@@ -1,0 +1,10 @@
+{"level":30,"time":"2021-03-01T21:55:46.114Z","pid":52927,"hostname":"felix","msg":"Listening on 33213"}
+{"level":30,"time":"2021-03-01T21:55:46.376Z","pid":52927,"hostname":"felix","msg":"Changed active context"}
+{"level":30,"time":"2021-03-01T21:55:46.483Z","pid":52927,"hostname":"felix","msg":"Video path: undefined"}
+{"level":30,"time":"2021-03-01T21:55:46.483Z","pid":52927,"hostname":"felix","msg":"Changed active page"}
+{"level":30,"time":"2021-03-01T21:55:58.781Z","pid":52927,"hostname":"felix","msg":"Changed active context"}
+{"level":30,"time":"2021-03-01T21:55:58.781Z","pid":52927,"hostname":"felix","msg":"Changing current active page"}
+{"level":30,"time":"2021-03-01T21:55:58.781Z","pid":52927,"hostname":"felix","msg":"Changed active page"}
+{"level":30,"time":"2021-03-01T21:55:58.802Z","pid":52927,"hostname":"felix","msg":"Changed active context"}
+{"level":30,"time":"2021-03-01T21:55:58.802Z","pid":52927,"hostname":"felix","msg":"Changing current active page"}
+{"level":30,"time":"2021-03-01T21:55:58.802Z","pid":52927,"hostname":"felix","msg":"Changed active page"}
