@@ -3,6 +3,9 @@ Documentation   Testes da página de login
 
 Library   Browser
 
+#Gancho para tirar screnshot apos a execução de cada teste
+Test Teardown   Take Screenshot
+
 ***Test Cases***
 Login com sucesso
     Open Browser   https://parodify.herokuapp.com/users/sign_in   chromium
@@ -15,6 +18,8 @@ Login com sucesso
     Click       css=input[type=submit]
 
     Wait For Elements State     css=a[href$=sign_out]   visible    10
+
+    Take Screenshot
     
     Sleep       2
 
@@ -29,6 +34,8 @@ Login senha incorreta
 
     Get Text    css=.is-danger .message-body   ==   Opps! Dados de acesso incorretos!
 
+    Take Screenshot
+
     Sleep       2
 
 Login e-mail incorreto
@@ -41,6 +48,8 @@ Login e-mail incorreto
 
 
     Get Text    css=.is-danger .message-body   ==   Opps! Dados de acesso incorretos!
+
+    Take Screenshot
 
     Sleep       2
 
@@ -55,6 +64,8 @@ Login campo e-mail vazio
 
     Get Text    css=.is-danger .message-body   ==   Opps! Dados de acesso incorretos!
 
+    Take Screenshot
+
     Sleep       2
 
 Login campo senha vazio
@@ -67,5 +78,7 @@ Login campo senha vazio
 
 
     Get Text    css=.is-danger .message-body   ==   Opps! Dados de acesso incorretos!
+
+    Take Screenshot
 
     Sleep       2
