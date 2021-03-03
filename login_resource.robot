@@ -7,7 +7,7 @@ Library   Browser
 Resource    resources/login_actions.robot
 
 #Gancho para tirar screnshot apos a execução de cada teste
-Test Teardown   Take Screenshot
+Test Teardown   Sleep   2    Take Screenshot
 
 ***Test Cases***
 Login com sucesso
@@ -16,8 +16,7 @@ Login com sucesso
     Login With      papito@parodify.com     pwd123
 
     Wait For Elements State     css=a[href$=sign_out]   visible    10
-    
-    Sleep       2
+
 
 Login senha incorreta
     Open Browser    https://parodify.herokuapp.com/users/sign_in   chromium
@@ -26,7 +25,6 @@ Login senha incorreta
 
     Get Text    css=.is-danger .message-body   ==   Opps! Dados de acesso incorretos!
 
-    Sleep       2
 
 Login e-mail incorreto
     Open Browser    https://parodify.herokuapp.com/users/sign_in   chromium
@@ -35,7 +33,6 @@ Login e-mail incorreto
 
     Get Text    css=.is-danger .message-body   ==   Opps! Dados de acesso incorretos!
 
-    Sleep       2
 
 Login campo e-mail vazio
     Open Browser    https://parodify.herokuapp.com/users/sign_in   chromium
@@ -44,7 +41,6 @@ Login campo e-mail vazio
 
     Get Text        css=.is-danger .message-body   ==   Opps! Dados de acesso incorretos!
 
-    Sleep       2
 
 Login campo senha vazio
     Open Browser    https://parodify.herokuapp.com/users/sign_in   chromium
@@ -52,5 +48,3 @@ Login campo senha vazio
     Login With      papito@parodify.com     ${EMPTY}
 
     Get Text        css=.is-danger .message-body   ==   Opps! Dados de acesso incorretos!
-
-    Sleep       2

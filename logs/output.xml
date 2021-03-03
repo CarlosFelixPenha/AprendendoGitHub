@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.2.2 (Python 3.9.1 on linux)" generated="20210302 15:57:01.282" rpa="false">
-<suite id="s1" name="Login Resource" source="/home/carlosfelixpenha/AprendendoGitHub/login_resource.robot">
+<robot generator="Robot 3.2.2 (Python 3.9.2 on linux)" generated="20210303 14:33:16.626" rpa="false">
+<suite id="s1" name="Login Keywords" source="/home/carlosfelixpenha/AprendendoGitHub/login_keywords.robot">
 <test id="s1-t1" name="Login com sucesso">
+<kw name="Open Login Page" library="login_actions">
 <kw name="Open Browser" library="Browser">
 <tags>
 <tag>BrowserControl</tag>
@@ -14,13 +15,15 @@ See `Browser, Context and Page` for more information about Browser and related c
 <arg>https://parodify.herokuapp.com/users/sign_in</arg>
 <arg>chromium</arg>
 </arguments>
-<msg timestamp="20210302 15:57:01.851" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
-<msg timestamp="20210302 15:57:01.851" level="INFO">{"browser": "chromium", "headless": false, "handleSIGINT": true, "handleSIGTERM": true, "handleSIGHUP": true, "timeout": 30000.0, "devtools": false, "slowMo": 0.0}</msg>
-<msg timestamp="20210302 15:57:02.060" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"handleSIGINT":true,"handleSIGTERM":true,"handleSIGHUP":true,"timeout":30000,"devtools":false,"slowMo":0}</msg>
-<msg timestamp="20210302 15:57:02.061" level="INFO">{"acceptDownloads": false, "ignoreHTTPSErrors": false, "bypassCSP": false, "deviceScaleFactor": 1.0, "isMobile": false, "hasTouch": false, "javaScriptEnabled": true, "offline": false, "hideRfBrowser": false}</msg>
-<msg timestamp="20210302 15:57:02.073" level="INFO">Successfully created context with options: {"acceptDownloads":false,"ignoreHTTPSErrors":false,"bypassCSP":false,"deviceScaleFactor":1,"isMobile":false,"hasTouch":false,"javaScriptEnabled":true,"offline":false,"hideRfBrowser":false}</msg>
-<msg timestamp="20210302 15:57:04.832" level="INFO">Successfully initialized new page object and opened url: https://parodify.herokuapp.com/users/sign_in</msg>
-<status status="PASS" starttime="20210302 15:57:01.850" endtime="20210302 15:57:04.832"></status>
+<msg timestamp="20210303 14:33:17.218" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg timestamp="20210303 14:33:17.219" level="INFO">{"browser": "chromium", "headless": false, "handleSIGINT": true, "handleSIGTERM": true, "handleSIGHUP": true, "timeout": 30000.0, "devtools": false, "slowMo": 0.0}</msg>
+<msg timestamp="20210303 14:33:17.423" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"handleSIGINT":true,"handleSIGTERM":true,"handleSIGHUP":true,"timeout":30000,"devtools":false,"slowMo":0}</msg>
+<msg timestamp="20210303 14:33:17.424" level="INFO">{"acceptDownloads": false, "ignoreHTTPSErrors": false, "bypassCSP": false, "deviceScaleFactor": 1.0, "isMobile": false, "hasTouch": false, "javaScriptEnabled": true, "offline": false, "hideRfBrowser": false}</msg>
+<msg timestamp="20210303 14:33:17.436" level="INFO">Successfully created context with options: {"acceptDownloads":false,"ignoreHTTPSErrors":false,"bypassCSP":false,"deviceScaleFactor":1,"isMobile":false,"hasTouch":false,"javaScriptEnabled":true,"offline":false,"hideRfBrowser":false}</msg>
+<msg timestamp="20210303 14:33:21.260" level="INFO">Successfully initialized new page object and opened url: https://parodify.herokuapp.com/users/sign_in</msg>
+<status status="PASS" starttime="20210303 14:33:17.218" endtime="20210303 14:33:21.261"></status>
+</kw>
+<status status="PASS" starttime="20210303 14:33:17.218" endtime="20210303 14:33:21.261"></status>
 </kw>
 <kw name="Login With" library="login_actions">
 <arguments>
@@ -37,8 +40,8 @@ See `Browser, Context and Page` for more information about Browser and related c
 <arg>id=user_email</arg>
 <arg>${email_arg}</arg>
 </arguments>
-<msg timestamp="20210302 15:57:04.834" level="INFO">Fills the text 'papito@parodify.com' in the given field.</msg>
-<status status="PASS" starttime="20210302 15:57:04.834" endtime="20210302 15:57:04.887"></status>
+<msg timestamp="20210303 14:33:21.262" level="INFO">Fills the text 'papito@parodify.com' in the given field.</msg>
+<status status="PASS" starttime="20210303 14:33:21.262" endtime="20210303 14:33:21.320"></status>
 </kw>
 <kw name="Fill Text" library="Browser">
 <tags>
@@ -50,8 +53,8 @@ See `Browser, Context and Page` for more information about Browser and related c
 <arg>id=user_password</arg>
 <arg>${pass_arg}</arg>
 </arguments>
-<msg timestamp="20210302 15:57:04.888" level="INFO">Fills the text 'pwd123' in the given field.</msg>
-<status status="PASS" starttime="20210302 15:57:04.888" endtime="20210302 15:57:04.904"></status>
+<msg timestamp="20210303 14:33:21.320" level="INFO">Fills the text 'pwd123' in the given field.</msg>
+<status status="PASS" starttime="20210303 14:33:21.320" endtime="20210303 14:33:21.334"></status>
 </kw>
 <kw name="Click" library="Browser">
 <tags>
@@ -62,9 +65,9 @@ See `Browser, Context and Page` for more information about Browser and related c
 <arguments>
 <arg>css=input[type=submit]</arg>
 </arguments>
-<status status="PASS" starttime="20210302 15:57:04.904" endtime="20210302 15:57:05.786"></status>
+<status status="PASS" starttime="20210303 14:33:21.335" endtime="20210303 14:33:22.035"></status>
 </kw>
-<status status="PASS" starttime="20210302 15:57:04.833" endtime="20210302 15:57:05.786"></status>
+<status status="PASS" starttime="20210303 14:33:21.261" endtime="20210303 14:33:22.035"></status>
 </kw>
 <kw name="Wait For Elements State" library="Browser">
 <tags>
@@ -77,28 +80,23 @@ See `Browser, Context and Page` for more information about Browser and related c
 <arg>visible</arg>
 <arg>10</arg>
 </arguments>
-<msg timestamp="20210302 15:57:06.173" level="INFO">Wait for Element with selector: css=a[href$=sign_out]</msg>
-<status status="PASS" starttime="20210302 15:57:05.786" endtime="20210302 15:57:06.173"></status>
+<msg timestamp="20210303 14:33:22.327" level="INFO">Wait for Element with selector: css=a[href$=sign_out]</msg>
+<status status="PASS" starttime="20210303 14:33:22.035" endtime="20210303 14:33:22.327"></status>
 </kw>
-<kw name="Sleep" library="BuiltIn">
+<kw name="Sleep" library="BuiltIn" type="teardown">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>2</arg>
+<arg>Take Screenshot</arg>
 </arguments>
-<msg timestamp="20210302 15:57:08.174" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20210302 15:57:06.173" endtime="20210302 15:57:08.175"></status>
+<msg timestamp="20210303 14:33:24.329" level="INFO">Slept 2 seconds</msg>
+<msg timestamp="20210303 14:33:24.329" level="INFO">Take Screenshot</msg>
+<status status="PASS" starttime="20210303 14:33:22.328" endtime="20210303 14:33:24.330"></status>
 </kw>
-<kw name="Take Screenshot" library="Browser" type="teardown">
-<tags>
-<tag>PageContent</tag>
-</tags>
-<doc>Takes a screenshot of the current window and saves it to ``path``. Saves it as a png.</doc>
-<msg timestamp="20210302 15:57:08.399" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-16.png"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-16.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20210302 15:57:08.176" endtime="20210302 15:57:08.399"></status>
-</kw>
-<status status="PASS" starttime="20210302 15:57:01.847" endtime="20210302 15:57:08.399" critical="yes"></status>
+<status status="PASS" starttime="20210303 14:33:17.214" endtime="20210303 14:33:24.330" critical="yes"></status>
 </test>
 <test id="s1-t2" name="Login senha incorreta">
+<kw name="Open Login Page" library="login_actions">
 <kw name="Open Browser" library="Browser">
 <tags>
 <tag>BrowserControl</tag>
@@ -111,13 +109,15 @@ See `Browser, Context and Page` for more information about Browser and related c
 <arg>https://parodify.herokuapp.com/users/sign_in</arg>
 <arg>chromium</arg>
 </arguments>
-<msg timestamp="20210302 15:57:08.455" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
-<msg timestamp="20210302 15:57:08.456" level="INFO">{"browser": "chromium", "headless": false, "handleSIGINT": true, "handleSIGTERM": true, "handleSIGHUP": true, "timeout": 30000.0, "devtools": false, "slowMo": 0.0}</msg>
-<msg timestamp="20210302 15:57:08.687" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"handleSIGINT":true,"handleSIGTERM":true,"handleSIGHUP":true,"timeout":30000,"devtools":false,"slowMo":0}</msg>
-<msg timestamp="20210302 15:57:08.688" level="INFO">{"acceptDownloads": false, "ignoreHTTPSErrors": false, "bypassCSP": false, "deviceScaleFactor": 1.0, "isMobile": false, "hasTouch": false, "javaScriptEnabled": true, "offline": false, "hideRfBrowser": false}</msg>
-<msg timestamp="20210302 15:57:08.699" level="INFO">Successfully created context with options: {"acceptDownloads":false,"ignoreHTTPSErrors":false,"bypassCSP":false,"deviceScaleFactor":1,"isMobile":false,"hasTouch":false,"javaScriptEnabled":true,"offline":false,"hideRfBrowser":false}</msg>
-<msg timestamp="20210302 15:57:11.303" level="INFO">Successfully initialized new page object and opened url: https://parodify.herokuapp.com/users/sign_in</msg>
-<status status="PASS" starttime="20210302 15:57:08.455" endtime="20210302 15:57:11.304"></status>
+<msg timestamp="20210303 14:33:24.490" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg timestamp="20210303 14:33:24.491" level="INFO">{"browser": "chromium", "headless": false, "handleSIGINT": true, "handleSIGTERM": true, "handleSIGHUP": true, "timeout": 30000.0, "devtools": false, "slowMo": 0.0}</msg>
+<msg timestamp="20210303 14:33:24.723" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"handleSIGINT":true,"handleSIGTERM":true,"handleSIGHUP":true,"timeout":30000,"devtools":false,"slowMo":0}</msg>
+<msg timestamp="20210303 14:33:24.724" level="INFO">{"acceptDownloads": false, "ignoreHTTPSErrors": false, "bypassCSP": false, "deviceScaleFactor": 1.0, "isMobile": false, "hasTouch": false, "javaScriptEnabled": true, "offline": false, "hideRfBrowser": false}</msg>
+<msg timestamp="20210303 14:33:24.736" level="INFO">Successfully created context with options: {"acceptDownloads":false,"ignoreHTTPSErrors":false,"bypassCSP":false,"deviceScaleFactor":1,"isMobile":false,"hasTouch":false,"javaScriptEnabled":true,"offline":false,"hideRfBrowser":false}</msg>
+<msg timestamp="20210303 14:33:27.277" level="INFO">Successfully initialized new page object and opened url: https://parodify.herokuapp.com/users/sign_in</msg>
+<status status="PASS" starttime="20210303 14:33:24.490" endtime="20210303 14:33:27.277"></status>
+</kw>
+<status status="PASS" starttime="20210303 14:33:24.490" endtime="20210303 14:33:27.277"></status>
 </kw>
 <kw name="Login With" library="login_actions">
 <arguments>
@@ -134,8 +134,8 @@ See `Browser, Context and Page` for more information about Browser and related c
 <arg>id=user_email</arg>
 <arg>${email_arg}</arg>
 </arguments>
-<msg timestamp="20210302 15:57:11.307" level="INFO">Fills the text 'papito@parodify.com' in the given field.</msg>
-<status status="PASS" starttime="20210302 15:57:11.306" endtime="20210302 15:57:11.363"></status>
+<msg timestamp="20210303 14:33:27.278" level="INFO">Fills the text 'papito@parodify.com' in the given field.</msg>
+<status status="PASS" starttime="20210303 14:33:27.278" endtime="20210303 14:33:27.321"></status>
 </kw>
 <kw name="Fill Text" library="Browser">
 <tags>
@@ -147,8 +147,8 @@ See `Browser, Context and Page` for more information about Browser and related c
 <arg>id=user_password</arg>
 <arg>${pass_arg}</arg>
 </arguments>
-<msg timestamp="20210302 15:57:11.363" level="INFO">Fills the text 'abc123' in the given field.</msg>
-<status status="PASS" starttime="20210302 15:57:11.363" endtime="20210302 15:57:11.379"></status>
+<msg timestamp="20210303 14:33:27.321" level="INFO">Fills the text 'abc123' in the given field.</msg>
+<status status="PASS" starttime="20210303 14:33:27.321" endtime="20210303 14:33:27.339"></status>
 </kw>
 <kw name="Click" library="Browser">
 <tags>
@@ -159,10 +159,14 @@ See `Browser, Context and Page` for more information about Browser and related c
 <arguments>
 <arg>css=input[type=submit]</arg>
 </arguments>
-<status status="PASS" starttime="20210302 15:57:11.379" endtime="20210302 15:57:12.008"></status>
+<status status="PASS" starttime="20210303 14:33:27.339" endtime="20210303 14:33:27.915"></status>
 </kw>
-<status status="PASS" starttime="20210302 15:57:11.304" endtime="20210302 15:57:12.008"></status>
+<status status="PASS" starttime="20210303 14:33:27.277" endtime="20210303 14:33:27.916"></status>
 </kw>
+<kw name="Alert Should Be" library="login_actions">
+<arguments>
+<arg>Opps! Dados de acesso incorretos!</arg>
+</arguments>
 <kw name="Get Text" library="Browser">
 <tags>
 <tag>Assertion</tag>
@@ -174,29 +178,26 @@ See the `Finding elements` section for details about the selectors.</doc>
 <arguments>
 <arg>css=.is-danger .message-body</arg>
 <arg>==</arg>
-<arg>Opps! Dados de acesso incorretos!</arg>
+<arg>${expect_arg}</arg>
 </arguments>
-<status status="PASS" starttime="20210302 15:57:12.008" endtime="20210302 15:57:12.282"></status>
+<status status="PASS" starttime="20210303 14:33:27.916" endtime="20210303 14:33:28.178"></status>
 </kw>
-<kw name="Sleep" library="BuiltIn">
+<status status="PASS" starttime="20210303 14:33:27.916" endtime="20210303 14:33:28.178"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn" type="teardown">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>2</arg>
+<arg>Take Screenshot</arg>
 </arguments>
-<msg timestamp="20210302 15:57:14.282" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20210302 15:57:12.282" endtime="20210302 15:57:14.283"></status>
+<msg timestamp="20210303 14:33:30.179" level="INFO">Slept 2 seconds</msg>
+<msg timestamp="20210303 14:33:30.179" level="INFO">Take Screenshot</msg>
+<status status="PASS" starttime="20210303 14:33:28.178" endtime="20210303 14:33:30.180"></status>
 </kw>
-<kw name="Take Screenshot" library="Browser" type="teardown">
-<tags>
-<tag>PageContent</tag>
-</tags>
-<doc>Takes a screenshot of the current window and saves it to ``path``. Saves it as a png.</doc>
-<msg timestamp="20210302 15:57:14.417" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-17.png"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-17.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20210302 15:57:14.284" endtime="20210302 15:57:14.418"></status>
-</kw>
-<status status="PASS" starttime="20210302 15:57:08.450" endtime="20210302 15:57:14.418" critical="yes"></status>
+<status status="PASS" starttime="20210303 14:33:24.481" endtime="20210303 14:33:30.180" critical="yes"></status>
 </test>
 <test id="s1-t3" name="Login e-mail incorreto">
+<kw name="Open Login Page" library="login_actions">
 <kw name="Open Browser" library="Browser">
 <tags>
 <tag>BrowserControl</tag>
@@ -209,13 +210,15 @@ See `Browser, Context and Page` for more information about Browser and related c
 <arg>https://parodify.herokuapp.com/users/sign_in</arg>
 <arg>chromium</arg>
 </arguments>
-<msg timestamp="20210302 15:57:14.467" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
-<msg timestamp="20210302 15:57:14.467" level="INFO">{"browser": "chromium", "headless": false, "handleSIGINT": true, "handleSIGTERM": true, "handleSIGHUP": true, "timeout": 30000.0, "devtools": false, "slowMo": 0.0}</msg>
-<msg timestamp="20210302 15:57:14.692" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"handleSIGINT":true,"handleSIGTERM":true,"handleSIGHUP":true,"timeout":30000,"devtools":false,"slowMo":0}</msg>
-<msg timestamp="20210302 15:57:14.694" level="INFO">{"acceptDownloads": false, "ignoreHTTPSErrors": false, "bypassCSP": false, "deviceScaleFactor": 1.0, "isMobile": false, "hasTouch": false, "javaScriptEnabled": true, "offline": false, "hideRfBrowser": false}</msg>
-<msg timestamp="20210302 15:57:14.704" level="INFO">Successfully created context with options: {"acceptDownloads":false,"ignoreHTTPSErrors":false,"bypassCSP":false,"deviceScaleFactor":1,"isMobile":false,"hasTouch":false,"javaScriptEnabled":true,"offline":false,"hideRfBrowser":false}</msg>
-<msg timestamp="20210302 15:57:17.601" level="INFO">Successfully initialized new page object and opened url: https://parodify.herokuapp.com/users/sign_in</msg>
-<status status="PASS" starttime="20210302 15:57:14.467" endtime="20210302 15:57:17.602"></status>
+<msg timestamp="20210303 14:33:30.267" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg timestamp="20210303 14:33:30.267" level="INFO">{"browser": "chromium", "headless": false, "handleSIGINT": true, "handleSIGTERM": true, "handleSIGHUP": true, "timeout": 30000.0, "devtools": false, "slowMo": 0.0}</msg>
+<msg timestamp="20210303 14:33:30.509" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"handleSIGINT":true,"handleSIGTERM":true,"handleSIGHUP":true,"timeout":30000,"devtools":false,"slowMo":0}</msg>
+<msg timestamp="20210303 14:33:30.509" level="INFO">{"acceptDownloads": false, "ignoreHTTPSErrors": false, "bypassCSP": false, "deviceScaleFactor": 1.0, "isMobile": false, "hasTouch": false, "javaScriptEnabled": true, "offline": false, "hideRfBrowser": false}</msg>
+<msg timestamp="20210303 14:33:30.520" level="INFO">Successfully created context with options: {"acceptDownloads":false,"ignoreHTTPSErrors":false,"bypassCSP":false,"deviceScaleFactor":1,"isMobile":false,"hasTouch":false,"javaScriptEnabled":true,"offline":false,"hideRfBrowser":false}</msg>
+<msg timestamp="20210303 14:33:34.584" level="INFO">Successfully initialized new page object and opened url: https://parodify.herokuapp.com/users/sign_in</msg>
+<status status="PASS" starttime="20210303 14:33:30.267" endtime="20210303 14:33:34.584"></status>
+</kw>
+<status status="PASS" starttime="20210303 14:33:30.266" endtime="20210303 14:33:34.584"></status>
 </kw>
 <kw name="Login With" library="login_actions">
 <arguments>
@@ -232,8 +235,8 @@ See `Browser, Context and Page` for more information about Browser and related c
 <arg>id=user_email</arg>
 <arg>${email_arg}</arg>
 </arguments>
-<msg timestamp="20210302 15:57:17.602" level="INFO">Fills the text '4041@parodify.com' in the given field.</msg>
-<status status="PASS" starttime="20210302 15:57:17.602" endtime="20210302 15:57:17.645"></status>
+<msg timestamp="20210303 14:33:34.585" level="INFO">Fills the text '4041@parodify.com' in the given field.</msg>
+<status status="PASS" starttime="20210303 14:33:34.585" endtime="20210303 14:33:34.631"></status>
 </kw>
 <kw name="Fill Text" library="Browser">
 <tags>
@@ -245,8 +248,8 @@ See `Browser, Context and Page` for more information about Browser and related c
 <arg>id=user_password</arg>
 <arg>${pass_arg}</arg>
 </arguments>
-<msg timestamp="20210302 15:57:17.645" level="INFO">Fills the text 'pwd123' in the given field.</msg>
-<status status="PASS" starttime="20210302 15:57:17.645" endtime="20210302 15:57:17.660"></status>
+<msg timestamp="20210303 14:33:34.632" level="INFO">Fills the text 'pwd123' in the given field.</msg>
+<status status="PASS" starttime="20210303 14:33:34.631" endtime="20210303 14:33:34.647"></status>
 </kw>
 <kw name="Click" library="Browser">
 <tags>
@@ -257,10 +260,14 @@ See `Browser, Context and Page` for more information about Browser and related c
 <arguments>
 <arg>css=input[type=submit]</arg>
 </arguments>
-<status status="PASS" starttime="20210302 15:57:17.661" endtime="20210302 15:57:18.147"></status>
+<status status="PASS" starttime="20210303 14:33:34.647" endtime="20210303 14:33:35.242"></status>
 </kw>
-<status status="PASS" starttime="20210302 15:57:17.602" endtime="20210302 15:57:18.148"></status>
+<status status="PASS" starttime="20210303 14:33:34.584" endtime="20210303 14:33:35.243"></status>
 </kw>
+<kw name="Alert Should Be" library="login_actions">
+<arguments>
+<arg>Opps! Dados de acesso incorretos!</arg>
+</arguments>
 <kw name="Get Text" library="Browser">
 <tags>
 <tag>Assertion</tag>
@@ -272,29 +279,26 @@ See the `Finding elements` section for details about the selectors.</doc>
 <arguments>
 <arg>css=.is-danger .message-body</arg>
 <arg>==</arg>
-<arg>Opps! Dados de acesso incorretos!</arg>
+<arg>${expect_arg}</arg>
 </arguments>
-<status status="PASS" starttime="20210302 15:57:18.148" endtime="20210302 15:57:18.422"></status>
+<status status="PASS" starttime="20210303 14:33:35.244" endtime="20210303 14:33:35.528"></status>
 </kw>
-<kw name="Sleep" library="BuiltIn">
+<status status="PASS" starttime="20210303 14:33:35.243" endtime="20210303 14:33:35.528"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn" type="teardown">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>2</arg>
+<arg>Take Screenshot</arg>
 </arguments>
-<msg timestamp="20210302 15:57:20.422" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20210302 15:57:18.422" endtime="20210302 15:57:20.422"></status>
+<msg timestamp="20210303 14:33:37.529" level="INFO">Slept 2 seconds</msg>
+<msg timestamp="20210303 14:33:37.530" level="INFO">Take Screenshot</msg>
+<status status="PASS" starttime="20210303 14:33:35.529" endtime="20210303 14:33:37.530"></status>
 </kw>
-<kw name="Take Screenshot" library="Browser" type="teardown">
-<tags>
-<tag>PageContent</tag>
-</tags>
-<doc>Takes a screenshot of the current window and saves it to ``path``. Saves it as a png.</doc>
-<msg timestamp="20210302 15:57:20.567" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-18.png"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-18.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20210302 15:57:20.423" endtime="20210302 15:57:20.567"></status>
-</kw>
-<status status="PASS" starttime="20210302 15:57:14.461" endtime="20210302 15:57:20.567" critical="yes"></status>
+<status status="PASS" starttime="20210303 14:33:30.256" endtime="20210303 14:33:37.530" critical="yes"></status>
 </test>
 <test id="s1-t4" name="Login campo e-mail vazio">
+<kw name="Open Login Page" library="login_actions">
 <kw name="Open Browser" library="Browser">
 <tags>
 <tag>BrowserControl</tag>
@@ -307,13 +311,15 @@ See `Browser, Context and Page` for more information about Browser and related c
 <arg>https://parodify.herokuapp.com/users/sign_in</arg>
 <arg>chromium</arg>
 </arguments>
-<msg timestamp="20210302 15:57:20.612" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
-<msg timestamp="20210302 15:57:20.612" level="INFO">{"browser": "chromium", "headless": false, "handleSIGINT": true, "handleSIGTERM": true, "handleSIGHUP": true, "timeout": 30000.0, "devtools": false, "slowMo": 0.0}</msg>
-<msg timestamp="20210302 15:57:20.858" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"handleSIGINT":true,"handleSIGTERM":true,"handleSIGHUP":true,"timeout":30000,"devtools":false,"slowMo":0}</msg>
-<msg timestamp="20210302 15:57:20.860" level="INFO">{"acceptDownloads": false, "ignoreHTTPSErrors": false, "bypassCSP": false, "deviceScaleFactor": 1.0, "isMobile": false, "hasTouch": false, "javaScriptEnabled": true, "offline": false, "hideRfBrowser": false}</msg>
-<msg timestamp="20210302 15:57:20.872" level="INFO">Successfully created context with options: {"acceptDownloads":false,"ignoreHTTPSErrors":false,"bypassCSP":false,"deviceScaleFactor":1,"isMobile":false,"hasTouch":false,"javaScriptEnabled":true,"offline":false,"hideRfBrowser":false}</msg>
-<msg timestamp="20210302 15:57:23.545" level="INFO">Successfully initialized new page object and opened url: https://parodify.herokuapp.com/users/sign_in</msg>
-<status status="PASS" starttime="20210302 15:57:20.611" endtime="20210302 15:57:23.545"></status>
+<msg timestamp="20210303 14:33:37.626" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg timestamp="20210303 14:33:37.627" level="INFO">{"browser": "chromium", "headless": false, "handleSIGINT": true, "handleSIGTERM": true, "handleSIGHUP": true, "timeout": 30000.0, "devtools": false, "slowMo": 0.0}</msg>
+<msg timestamp="20210303 14:33:37.861" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"handleSIGINT":true,"handleSIGTERM":true,"handleSIGHUP":true,"timeout":30000,"devtools":false,"slowMo":0}</msg>
+<msg timestamp="20210303 14:33:37.863" level="INFO">{"acceptDownloads": false, "ignoreHTTPSErrors": false, "bypassCSP": false, "deviceScaleFactor": 1.0, "isMobile": false, "hasTouch": false, "javaScriptEnabled": true, "offline": false, "hideRfBrowser": false}</msg>
+<msg timestamp="20210303 14:33:37.873" level="INFO">Successfully created context with options: {"acceptDownloads":false,"ignoreHTTPSErrors":false,"bypassCSP":false,"deviceScaleFactor":1,"isMobile":false,"hasTouch":false,"javaScriptEnabled":true,"offline":false,"hideRfBrowser":false}</msg>
+<msg timestamp="20210303 14:33:40.766" level="INFO">Successfully initialized new page object and opened url: https://parodify.herokuapp.com/users/sign_in</msg>
+<status status="PASS" starttime="20210303 14:33:37.626" endtime="20210303 14:33:40.766"></status>
+</kw>
+<status status="PASS" starttime="20210303 14:33:37.625" endtime="20210303 14:33:40.766"></status>
 </kw>
 <kw name="Login With" library="login_actions">
 <arguments>
@@ -330,8 +336,8 @@ See `Browser, Context and Page` for more information about Browser and related c
 <arg>id=user_email</arg>
 <arg>${email_arg}</arg>
 </arguments>
-<msg timestamp="20210302 15:57:23.546" level="INFO">Fills the text '' in the given field.</msg>
-<status status="PASS" starttime="20210302 15:57:23.546" endtime="20210302 15:57:23.574"></status>
+<msg timestamp="20210303 14:33:40.767" level="INFO">Fills the text '' in the given field.</msg>
+<status status="PASS" starttime="20210303 14:33:40.767" endtime="20210303 14:33:40.796"></status>
 </kw>
 <kw name="Fill Text" library="Browser">
 <tags>
@@ -343,8 +349,8 @@ See `Browser, Context and Page` for more information about Browser and related c
 <arg>id=user_password</arg>
 <arg>${pass_arg}</arg>
 </arguments>
-<msg timestamp="20210302 15:57:23.575" level="INFO">Fills the text 'pwd123' in the given field.</msg>
-<status status="PASS" starttime="20210302 15:57:23.574" endtime="20210302 15:57:23.609"></status>
+<msg timestamp="20210303 14:33:40.797" level="INFO">Fills the text 'pwd123' in the given field.</msg>
+<status status="PASS" starttime="20210303 14:33:40.797" endtime="20210303 14:33:40.823"></status>
 </kw>
 <kw name="Click" library="Browser">
 <tags>
@@ -355,10 +361,14 @@ See `Browser, Context and Page` for more information about Browser and related c
 <arguments>
 <arg>css=input[type=submit]</arg>
 </arguments>
-<status status="PASS" starttime="20210302 15:57:23.609" endtime="20210302 15:57:24.263"></status>
+<status status="PASS" starttime="20210303 14:33:40.823" endtime="20210303 14:33:41.296"></status>
 </kw>
-<status status="PASS" starttime="20210302 15:57:23.545" endtime="20210302 15:57:24.263"></status>
+<status status="PASS" starttime="20210303 14:33:40.766" endtime="20210303 14:33:41.297"></status>
 </kw>
+<kw name="Alert Should Be" library="login_actions">
+<arguments>
+<arg>Opps! Dados de acesso incorretos!</arg>
+</arguments>
 <kw name="Get Text" library="Browser">
 <tags>
 <tag>Assertion</tag>
@@ -370,29 +380,26 @@ See the `Finding elements` section for details about the selectors.</doc>
 <arguments>
 <arg>css=.is-danger .message-body</arg>
 <arg>==</arg>
-<arg>Opps! Dados de acesso incorretos!</arg>
+<arg>${expect_arg}</arg>
 </arguments>
-<status status="PASS" starttime="20210302 15:57:24.264" endtime="20210302 15:57:24.536"></status>
+<status status="PASS" starttime="20210303 14:33:41.298" endtime="20210303 14:33:41.549"></status>
 </kw>
-<kw name="Sleep" library="BuiltIn">
+<status status="PASS" starttime="20210303 14:33:41.297" endtime="20210303 14:33:41.549"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn" type="teardown">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>2</arg>
+<arg>Take Screenshot</arg>
 </arguments>
-<msg timestamp="20210302 15:57:26.537" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20210302 15:57:24.536" endtime="20210302 15:57:26.537"></status>
+<msg timestamp="20210303 14:33:43.550" level="INFO">Slept 2 seconds</msg>
+<msg timestamp="20210303 14:33:43.551" level="INFO">Take Screenshot</msg>
+<status status="PASS" starttime="20210303 14:33:41.549" endtime="20210303 14:33:43.551"></status>
 </kw>
-<kw name="Take Screenshot" library="Browser" type="teardown">
-<tags>
-<tag>PageContent</tag>
-</tags>
-<doc>Takes a screenshot of the current window and saves it to ``path``. Saves it as a png.</doc>
-<msg timestamp="20210302 15:57:26.717" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-19.png"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-19.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20210302 15:57:26.539" endtime="20210302 15:57:26.718"></status>
-</kw>
-<status status="PASS" starttime="20210302 15:57:20.606" endtime="20210302 15:57:26.718" critical="yes"></status>
+<status status="PASS" starttime="20210303 14:33:37.617" endtime="20210303 14:33:43.551" critical="yes"></status>
 </test>
 <test id="s1-t5" name="Login campo senha vazio">
+<kw name="Open Login Page" library="login_actions">
 <kw name="Open Browser" library="Browser">
 <tags>
 <tag>BrowserControl</tag>
@@ -405,13 +412,15 @@ See `Browser, Context and Page` for more information about Browser and related c
 <arg>https://parodify.herokuapp.com/users/sign_in</arg>
 <arg>chromium</arg>
 </arguments>
-<msg timestamp="20210302 15:57:26.758" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
-<msg timestamp="20210302 15:57:26.758" level="INFO">{"browser": "chromium", "headless": false, "handleSIGINT": true, "handleSIGTERM": true, "handleSIGHUP": true, "timeout": 30000.0, "devtools": false, "slowMo": 0.0}</msg>
-<msg timestamp="20210302 15:57:26.987" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"handleSIGINT":true,"handleSIGTERM":true,"handleSIGHUP":true,"timeout":30000,"devtools":false,"slowMo":0}</msg>
-<msg timestamp="20210302 15:57:26.988" level="INFO">{"acceptDownloads": false, "ignoreHTTPSErrors": false, "bypassCSP": false, "deviceScaleFactor": 1.0, "isMobile": false, "hasTouch": false, "javaScriptEnabled": true, "offline": false, "hideRfBrowser": false}</msg>
-<msg timestamp="20210302 15:57:26.998" level="INFO">Successfully created context with options: {"acceptDownloads":false,"ignoreHTTPSErrors":false,"bypassCSP":false,"deviceScaleFactor":1,"isMobile":false,"hasTouch":false,"javaScriptEnabled":true,"offline":false,"hideRfBrowser":false}</msg>
-<msg timestamp="20210302 15:57:30.124" level="INFO">Successfully initialized new page object and opened url: https://parodify.herokuapp.com/users/sign_in</msg>
-<status status="PASS" starttime="20210302 15:57:26.757" endtime="20210302 15:57:30.125"></status>
+<msg timestamp="20210303 14:33:43.612" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg timestamp="20210303 14:33:43.613" level="INFO">{"browser": "chromium", "headless": false, "handleSIGINT": true, "handleSIGTERM": true, "handleSIGHUP": true, "timeout": 30000.0, "devtools": false, "slowMo": 0.0}</msg>
+<msg timestamp="20210303 14:33:43.848" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"handleSIGINT":true,"handleSIGTERM":true,"handleSIGHUP":true,"timeout":30000,"devtools":false,"slowMo":0}</msg>
+<msg timestamp="20210303 14:33:43.850" level="INFO">{"acceptDownloads": false, "ignoreHTTPSErrors": false, "bypassCSP": false, "deviceScaleFactor": 1.0, "isMobile": false, "hasTouch": false, "javaScriptEnabled": true, "offline": false, "hideRfBrowser": false}</msg>
+<msg timestamp="20210303 14:33:43.858" level="INFO">Successfully created context with options: {"acceptDownloads":false,"ignoreHTTPSErrors":false,"bypassCSP":false,"deviceScaleFactor":1,"isMobile":false,"hasTouch":false,"javaScriptEnabled":true,"offline":false,"hideRfBrowser":false}</msg>
+<msg timestamp="20210303 14:33:47.644" level="INFO">Successfully initialized new page object and opened url: https://parodify.herokuapp.com/users/sign_in</msg>
+<status status="PASS" starttime="20210303 14:33:43.612" endtime="20210303 14:33:47.645"></status>
+</kw>
+<status status="PASS" starttime="20210303 14:33:43.611" endtime="20210303 14:33:47.646"></status>
 </kw>
 <kw name="Login With" library="login_actions">
 <arguments>
@@ -428,8 +437,8 @@ See `Browser, Context and Page` for more information about Browser and related c
 <arg>id=user_email</arg>
 <arg>${email_arg}</arg>
 </arguments>
-<msg timestamp="20210302 15:57:30.126" level="INFO">Fills the text 'papito@parodify.com' in the given field.</msg>
-<status status="PASS" starttime="20210302 15:57:30.126" endtime="20210302 15:57:30.170"></status>
+<msg timestamp="20210303 14:33:47.649" level="INFO">Fills the text 'papito@parodify.com' in the given field.</msg>
+<status status="PASS" starttime="20210303 14:33:47.648" endtime="20210303 14:33:47.709"></status>
 </kw>
 <kw name="Fill Text" library="Browser">
 <tags>
@@ -441,8 +450,8 @@ See `Browser, Context and Page` for more information about Browser and related c
 <arg>id=user_password</arg>
 <arg>${pass_arg}</arg>
 </arguments>
-<msg timestamp="20210302 15:57:30.170" level="INFO">Fills the text '' in the given field.</msg>
-<status status="PASS" starttime="20210302 15:57:30.170" endtime="20210302 15:57:30.185"></status>
+<msg timestamp="20210303 14:33:47.710" level="INFO">Fills the text '' in the given field.</msg>
+<status status="PASS" starttime="20210303 14:33:47.709" endtime="20210303 14:33:47.727"></status>
 </kw>
 <kw name="Click" library="Browser">
 <tags>
@@ -453,10 +462,14 @@ See `Browser, Context and Page` for more information about Browser and related c
 <arguments>
 <arg>css=input[type=submit]</arg>
 </arguments>
-<status status="PASS" starttime="20210302 15:57:30.186" endtime="20210302 15:57:30.578"></status>
+<status status="PASS" starttime="20210303 14:33:47.727" endtime="20210303 14:33:48.037"></status>
 </kw>
-<status status="PASS" starttime="20210302 15:57:30.125" endtime="20210302 15:57:30.578"></status>
+<status status="PASS" starttime="20210303 14:33:47.646" endtime="20210303 14:33:48.037"></status>
 </kw>
+<kw name="Alert Should Be" library="login_actions">
+<arguments>
+<arg>Opps! Dados de acesso incorretos!</arg>
+</arguments>
 <kw name="Get Text" library="Browser">
 <tags>
 <tag>Assertion</tag>
@@ -468,30 +481,26 @@ See the `Finding elements` section for details about the selectors.</doc>
 <arguments>
 <arg>css=.is-danger .message-body</arg>
 <arg>==</arg>
-<arg>Opps! Dados de acesso incorretos!</arg>
+<arg>${expect_arg}</arg>
 </arguments>
-<status status="PASS" starttime="20210302 15:57:30.578" endtime="20210302 15:57:30.836"></status>
+<status status="PASS" starttime="20210303 14:33:48.038" endtime="20210303 14:33:48.322"></status>
 </kw>
-<kw name="Sleep" library="BuiltIn">
+<status status="PASS" starttime="20210303 14:33:48.037" endtime="20210303 14:33:48.323"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn" type="teardown">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>2</arg>
+<arg>Take Screenshot</arg>
 </arguments>
-<msg timestamp="20210302 15:57:32.837" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20210302 15:57:30.836" endtime="20210302 15:57:32.838"></status>
+<msg timestamp="20210303 14:33:50.323" level="INFO">Slept 2 seconds</msg>
+<msg timestamp="20210303 14:33:50.323" level="INFO">Take Screenshot</msg>
+<status status="PASS" starttime="20210303 14:33:48.323" endtime="20210303 14:33:50.324"></status>
 </kw>
-<kw name="Take Screenshot" library="Browser" type="teardown">
-<tags>
-<tag>PageContent</tag>
-</tags>
-<doc>Takes a screenshot of the current window and saves it to ``path``. Saves it as a png.</doc>
-<msg timestamp="20210302 15:57:33.012" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-20.png"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-20.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20210302 15:57:32.839" endtime="20210302 15:57:33.012"></status>
-</kw>
-<status status="PASS" starttime="20210302 15:57:26.752" endtime="20210302 15:57:33.012" critical="yes"></status>
+<status status="PASS" starttime="20210303 14:33:43.604" endtime="20210303 14:33:50.324" critical="yes"></status>
 </test>
 <doc>Testes da página de login</doc>
-<status status="PASS" starttime="20210302 15:57:01.282" endtime="20210302 15:57:33.053"></status>
+<status status="PASS" starttime="20210303 14:33:16.627" endtime="20210303 14:33:50.360"></status>
 </suite>
 <statistics>
 <total>
@@ -501,14 +510,14 @@ See the `Finding elements` section for details about the selectors.</doc>
 <tag>
 </tag>
 <suite>
-<stat pass="5" fail="0" id="s1" name="Login Resource">Login Resource</stat>
+<stat pass="5" fail="0" id="s1" name="Login Keywords">Login Keywords</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20210302 15:57:01.851" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
-<msg timestamp="20210302 15:57:08.455" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
-<msg timestamp="20210302 15:57:14.467" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
-<msg timestamp="20210302 15:57:20.612" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
-<msg timestamp="20210302 15:57:26.758" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg timestamp="20210303 14:33:17.218" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg timestamp="20210303 14:33:24.490" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg timestamp="20210303 14:33:30.267" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg timestamp="20210303 14:33:37.626" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg timestamp="20210303 14:33:43.612" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
 </errors>
 </robot>
