@@ -7,8 +7,7 @@ Library    Browser
 Resource    resources/login_actions.robot
 
 #Gancho para tirar screnshot apos a execução de cada teste
-Test Teardown   Sleep   2       Take Screenshot
-
+Test Teardown      Take Screenshot 
 ***Test Cases***
 Login com sucesso
     Open Login Page

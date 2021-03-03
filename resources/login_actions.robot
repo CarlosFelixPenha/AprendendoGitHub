@@ -3,7 +3,7 @@
 ***Keywords***
 #Chamando a tela de login no Chrome
 Open Login Page      
-    Open Browser    https://parodify.herokuapp.com/users/sign_in   chromium    
+    Open Browser    https://parodify.herokuapp.com/users/sign_in   chromium
 
 # Facilitando a chamada e imput na tela de login 
 Login With
@@ -19,3 +19,4 @@ Alert Should Be
     [Arguments]          ${expect_arg}
 
     Get Text             css=.is-danger .message-body   ==   ${expect_arg}
+    Sleep                2
